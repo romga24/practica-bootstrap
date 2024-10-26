@@ -1,0 +1,284 @@
+/*Exportamos la fuente*/
+@font-face {
+    font-family: "fuente";
+    src: url('./../Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+*{
+    font-family: "fuente";
+}
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "header" "seccion-uno" "seccion-dos" "seccion-media" "seccion-tres" "footer";
+    grid-template-rows: 14% auto 23em 30% 30% 20%;
+}
+.imagen-logo{
+    width: 30%;
+    height: 30%;
+    margin-left: 17em;
+    max-width: 100%;
+    z-index: 1;
+}
+header{
+    z-index: 3;
+}
+.navbar-nav{
+    margin-right: 15em;
+}
+nav a img{
+    margin-right: 5em;
+}
+.tam-medi-img{
+    width: 12em;
+    height: 12em;
+}
+#seccion-uno{
+    display: flex;
+    flex-direction: row;
+    grid-area: seccion-uno; 
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+}
+#caja-bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 100%;
+    background-image: url(./../img/black-and-white-music-1920-x-1080-wallpaper-gu8jjzy5lwjr10xf.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    color: white;
+    padding: 10px;
+}
+.carrousel-item img{
+    max-width: 100%;
+    height: auto;
+}
+#sombreado-gris{
+    background-color: rgb(225, 225, 225, 0.5);
+    width: 100%;
+    height: 100%;
+}
+#caja-bienvenida h1, #caja-bienvenida p{
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#caja-bienvenida h1{
+    margin-top: 1.5em;
+    font-size: 3rem;
+}
+#seccion-dos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 23em;
+    grid-area: seccion-dos;
+}
+#fondo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 25%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.959);
+}
+#fondo h2{
+    cursor: pointer;
+    font-weight: bold;
+}
+#info{
+    width: 75%;
+    background-color: rgb(255, 255, 255);
+}
+.imagen-artista{
+    width: 15em;
+    height: 8.5em;
+    max-width: 100%;
+}
+#artistas div h3{
+    display: none;
+    text-align: start;
+}
+#artistas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 3em;
+    margin-left: 4em;
+}
+#artistas div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    text-align: center;
+}
+#artistas p{
+    font-size: 3em;
+}
+#oculto{
+    display: none;
+}
+#fondo div{
+    margin-bottom: 3px;
+}
+#seccion-media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: seccion-media;
+}
+#seccion-tres{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: seccion-tres;
+    background-color: rgb(234, 234, 234);
+}
+#seccion-tres h3{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.tam{
+    width: 2em;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: footer;
+}
+#sobre-nosotros{
+    margin-left: 5em;
+}
+#imagen-iconos{
+    margin-right: 5em;
+}
+ul{
+    list-style: none;
+}
+#imagen-iconos{
+    display: flex;
+    flex-direction: row;
+}
+.icono{
+    width: 4em;
+    height: 4em;
+    filter: invert(1);
+}
+
+/*Estilos para pantalla de menos de 767px*/
+@media (max-width: 767px) {
+    body {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-areas: "header" "seccion-uno" "seccion-dos" "seccion-media" "seccion-tres" "footer";
+      grid-template-rows: 7% 50rem 70em 30% 20% 20%;
+    }
+    #seccion-uno {
+      display: flex;
+      flex-direction: column;
+      grid-area: seccion-uno;
+    }
+    .carousel {
+      height: 50vh; 
+      width: 100%;
+    }
+    #caja-bienvenida{
+        position: absolute;
+        bottom: 0; 
+        left: 0;
+        width: 100%;
+        background-color: #f0f0f0; 
+        padding: 10px; 
+        height: 50%;
+        width: 100%;
+    }
+    #caja-bienvenida h1 {
+        font-size: 2rem; 
+    }
+    #seccion-dos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        grid-area: seccion-dos;
+    }
+    #fondo{
+        width: 100vw;
+        height: 15%;
+        background-color: rgba(255, 255, 255, 0.959);
+    }
+    #info{
+        height: 85%;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+    }
+    #artistas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-right: 5em;
+    }
+    #fondo h2{
+        font-weight: bold;
+    }
+    #artistas div{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #imagen-iconos{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+  }
+
+/*Estilos para pantalla de menos de 480px*/
+@media (max-width: 480px){
+    body {
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-areas: "header" "seccion-uno" "seccion-dos" "seccion-media" "seccion-tres" "footer";
+        grid-template-rows: 7% 50rem 60em 30% 20% 20%;
+      }
+    .imagen-artista{
+        border-radius: 10px;
+        width: 5em;
+        height: 5em;
+        max-width: 100%;
+    }
+    #fondo{
+        height: 15%;
+    }
+    #info{
+        height: 85%;
+    }
+    #imagen-iconos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    #oculto{
+        display: block;
+    }
+    .icono{
+        width: 2em;
+        height: 2em;
+    }
+    #seccion-tres h3{
+        font-size: 2.5rem;
+    }
+}

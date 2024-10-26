@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo_index.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+    <title>Soundlist</title>
+</head>
+<body>
+  
+   <!--Cabecera de la página-->
+  <header class=" d-flex justify-content-center bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white w-100">
+      <a class="navbar-brand me-5" href="#"> 
+        <img src="./../img/logo.jpg" alt="logo" class="imagen-logo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-dark ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse bg-white w-100" id="navbarNavAltMarkup">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link p-2 text-dark" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2 text-dark" href="#">Artistas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2 text-dark" href="#">Géneros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2 text-dark" href="#">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2 text-dark" href="#">Programas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2 text-dark" href="#">Podcast</a>
+          </li>
+          <li class="nav-item">
+              <button type="button" class="btn bg-white border-0 btn-md" data-bs-toggle="modal" data-bs-target="#loginModal">
+                <span>Iniciar Sesión</span>
+              </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--Modal para iniciar secion-->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form method="post">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Correo electrónico">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
+            </div>
+            <button type="submit" class="btn btn-secondary">Iniciar Sesión</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Sección uno de la página-->
+  <section id="seccion-uno" class="container-fluid w-100">
+    <div id="carouselExampleControlsNoTouching" class="carousel slide w-100" data-bs-touch="false" data-bs-interval="0">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./../img/lover.png" class="d-block w-100" alt="aitana">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/karolg.avif" class="d-block w-100" alt="karolg">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/badbunny.jpg" class="d-block w-100" alt="taylorSwift">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/aitana.webp" class="d-block w-100" alt="taylorSwift">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/nickyminaj.jpeg" class="d-block w-100" alt="taylorSwift">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/miley_cyrus.webp" class="d-block w-100" alt="taylorSwift">
+        </div>
+        <div class="carousel-item">
+          <img src="./../img/funzo.webp" class="d-block w-100" alt="taylorSwift">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="texto-bienvenida w-100" id="caja-bienvenida">
+      <div id="sombreado-gris">
+        <h1>¡Bienvenido a SoundList!</h1>
+        <p>En SoundList, nos dedicamos a ofrecerte una experiencia musical excepcional. Nuestra plataforma está diseñada para conectar a amantes de la música de todas partes del mundo, proporcionando un espacio donde puedas descubrir nuevos artistas, explorar géneros emocionantes y sumergirte en los éxitos más recientes.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!--Sección dos de la página-->
+  <section id="seccion-dos">
+    <div id="fondo">
+      <h2>Ranking de los artistas más escuchados en 2023</h2>
+    </div>
+    <div id="info">
+      <div id="artistas">
+        <div>
+          <h3>Taylor Swift</h3>
+          <img src="./../img/artistas/ts.jpg" alt="taylor_swift" class="imagen-artista mb-4">
+          <p>1</p>
+        </div>
+        <div>
+          <h3>Bad Bunny</h3>
+          <img src="./../img/artistas/bb.webp" alt="badbunny" class="imagen-artista mb-4">
+          <p>2</p>
+        </div>
+        <div>
+          <h3>Drake</h3>
+          <img src="./../img/artistas/dk.webp" alt="drake" class="imagen-artista mb-4">
+          <p>3</p>
+        </div>
+        <div>
+          <h3>The Weeknd</h3>
+          <img src="./../img/artistas/tw.jpeg" alt="the_weeknd" class="imagen-artista mb-4">
+          <p>5</p>
+        </div>
+        <div>
+          <h3>Karol G</h3>
+          <img src="./../img/artistas/kg.jpeg" alt="karol_g" class="imagen-artista mb-4">
+          <p>6</p>
+        </div>
+        <div id="oculto">
+          <h3>Quevedo</h3>
+          <img src="./../img/artistas/quevedo.jpg" alt="Quevedo" class="imagen-artista mb-4">
+          <p>7</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Sección media de la página-->
+  <section id="seccion-media" class="border-top border-dark p-3">
+    
+    <h3 class="mb-5">Mejores álbumes de 2023</h3>
+    
+    <div class="d-flex justify-content-center">
+      
+      <div class="media flex-md-row mb-4 ms-3 me-3">
+          <div class="media-body text-center">
+              <img class="mr-3 img-fluid tam-medi-img mb-3" src="./../img/albunes/1989 tv.jpeg" alt="Álbum_Taylor">
+              <h5>1989 (Taylor's version)</h5>
+              <p>1989 (Taylor's Version), el cuarto álbum regrabado de la cantautora estadounidense Taylor Swift, fue lanzado el 27 de octubre de 2023 a través de Republic Records. El álbum es una regrabación de su quinto álbum de estudio, 1989 (2014), y cuenta con 21 canciones, incluyendo cinco canciones inéditas de "The Vault".</p>
+          </div>
+      </div>
+  
+      <div class="media flex-md-row mb-4 ms-3 me-3" >  
+          <div class="media-body text-center">
+              <img class="mr-3 img-fluid tam-medi-img mb-3" src="./../img/albunes/Olivia-Rodrigo-Guts.jpg" alt="Álbum_Olivia">
+              <h5>Guts</h5>
+              <p>Guts (estilizado en mayúsculas; en español: Entrañas) es el segundo álbum de estudio de la cantante estadounidense-filipina Olivia Rodrigo. Fue lanzado el 8 de septiembre de 2023, a través de Geffen Records. El álbum fue escrito por Rodrigo y el productor Dan Nigro, con colaboraciones en autoría de Julia Michaels y Amy Allen.</p>
+          </div>
+      </div>
+  
+      <div class="media flex-md-row mb-4 ms-3 me-3">
+          <div class="media-body text-center">
+              <img class="mr-3 img-fluid tam-medi-img mb-3" src="./../img/albunes/Gloria.jpg" alt="Álbum_Gloria">
+              <h5>Gloria</h5>
+              <p>Gloria es el cuarto álbum de estudio del cantante y compositor inglés Sam Smith, publicado el 27 de enero de 2023 a través de Capitol Records. Es el primer álbum de Smith desde Love Goes (2020).2​ Le precedieron los sencillos "Love Me More", "Unholy", una colaboración con Kim Petras,3​ y "Gimme", una colaboración con Koffee y Jessie Reyez.</p>
+          </div>
+      </div>
+
+  </div>
+</section>
+
+  <!--Sección tres de la página-->
+  <section id="seccion-tres">
+    <h3>Newsletter</h3>
+      <div class="container">
+        <form method="post" class="text-center">
+          <div class="form-row justify-content-center">
+            <div class="form-group mb-3">
+              <label for="email">Correo electrónico</label>
+            </div>
+            <div class="form-group mb-3">
+              <input type="email" class="form-control rounded-pill " id="email" name="email" placeholder="Ingrese su correo electrónico">
+            </div>
+            <div class="form-group mb-3">
+           <button type="submit" class="btn btn-dark">Suscribirse</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<!--Pié de página-->
+<footer class="bg-dark text-white py-4">
+  <div id="sobre-nosotros">
+    <h4>Sobre nosotros</h4>
+    <ul>
+      <li>Historia</li>
+      <li>Valores</li>
+      <li>Equipo</li>
+      <li>Musica</li>  
+   </ul>
+  </div>
+  <div id="imagen-iconos">
+     <div><img src="./../img/iconos/bxl-facebook-circle.svg" alt="facebook" class="icono"></div>
+     <div><img src="./../img/iconos/bxl-instagram.svg" alt="instagram" class="icono"></div>
+     <div><img src="./../img/iconos/bxl-linkedin-square.svg" alt="linkedin" class="icono"></div>
+     <div><img src="./../img/iconos/bxl-twitter.svg" alt="twitter" class="icono"></div>
+  </div>
+  </div>
+</div>
+</footer>
+
+<!--Código JQuery para darle iteratividad a la página-->
+<script src="codigoJQuery.js"></script>
+
+</body>
+</html>
